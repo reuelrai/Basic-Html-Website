@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    flex-grow: 0.2;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+}
+
+.logo img {
+    border-radius: 16px;
+}
+
+section.intro {
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+}
+section.intro h1{
+    font-weight: bold;
+    font-size: 2em;
+}
+
