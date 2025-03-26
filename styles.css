@@ -1,3 +1,15 @@
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+}
+
+[data-theme="dark"] {
+    --background-color: #000;
+    --text-color: #fff;
+
+}
+
+
 header {
     display: flex;
     justify-content: space-between;
@@ -15,6 +27,7 @@ nav ul {
     padding: 0;
 }
 
+
 .logo img {
     border-radius: 16px;
 }
@@ -23,11 +36,16 @@ section.intro {
     text-align: center;
 }
 
-footer{
+footer {
     text-align: center;
 }
-section.intro h1{
+
+section.intro h1 {
     font-weight: bold;
     font-size: 2em;
 }
 
+.logo {
+    font-size: 3em;
+    font-weight: bold;
+}
