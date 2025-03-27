@@ -1,21 +1,33 @@
-const theme = localStorage.getItem('theme');
-if (theme) {
-    document.body.setAttribute('data-theme', theme);
+// Retrieve theme from localStorage or default to dark
+const theme = localStorage.getItem('theme') || 'dark';
+document.body.setAttribute('data-theme', theme);
+
+const sunIcon = document.getElementById('sun_icon');
+const moonIcon = document.getElementById('moon_icon');
+
+// Set initial icon visibility
+if (theme === 'dark') {
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'inline';
 } else {
-    localStorage.setItem('theme', 'dark');
+    sunIcon.style.display = 'inline';
+    moonIcon.style.display = 'none';
 }
 
 function toggleTheme() {
-    const sunIcon = document.getElementById('sun_icon');
-    const moonIcon = document.getElementById('moon_icon');
     const body = document.body;
-    const theme = body.getAttribute('data-theme');
-    body.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
-    if (theme === 'dark') {
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
-    } else {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme); // Save theme change
+
+    // Toggle icons
+    if (newTheme === 'dark') {
         sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
+        moonIcon.style.display = 'inline';
+    } else {
+        sunIcon.style.display = 'inline';
+        moonIcon.style.display = 'none';
     }
 }
