@@ -1,0 +1,179 @@
+/* Default Light Mode */
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --accent-color: #000;
+    --border-color: #000;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --background-color: #000;
+    --text-color: #fff;
+    --accent-color: #fff;
+    --border-color: #fff;
+}
+
+/* Smooth Theme Transition */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* General Styling */
+html,
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+nav ul li {
+    margin: 0 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+
+    color: var(--accent-color);
+    
+
+    padding-bottom: 2px;
+    background-image: linear-gradient(var(--accent-color) 0 0);
+    background-position: 0 100%;
+    /*OR bottom left*/
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition:
+        background-size 0.3s,
+        background-position 0s 0.3s;
+    /*change after the size immediately*/
+}
+
+nav ul li a:hover {
+    background-position: 100% 100%;
+    /*OR bottom right*/
+    background-size: 100% 2px;
+}
+
+/* Logo */
+.logo img {
+    border-radius: 16px;
+}
+
+.logo {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+section.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    height: 50vh;
+}
+
+section.intro h1 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/* Sections */
+.projects,
+.experience,
+.education {
+    width: 100%;
+    text-align: left;
+}
+
+/* Wrapper for Flex Layout */
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Lists */
+.projects ul,
+.experience ul,
+.education ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Feedback Section */
+.feedback-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Blockquote Styling */
+blockquote {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2em;
+    }
+
+    section.intro h1 {
+        font-size: 1.5em;
+    }
+}
