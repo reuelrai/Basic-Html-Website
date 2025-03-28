@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rosarivo:ital@0;1&display=swap" rel="stylesheet">
     <meta name="author" content="Reuel Rai" />
     <title>Basic Html Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" text="text/css">
 </head>
 
 <body>
@@ -23,13 +23,15 @@
         </span>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button onclick="toggleTheme()">
-                        <span id="sun_icon" style="display: none;">☀️</span>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button type="button" onclick="toggleTheme()">
+                        <span id="sun_icon">☀️</span>
                         <span id="moon_icon" style="display: none;">🌙</span>
-                    </button></li>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -39,6 +41,19 @@
         <section class="intro">
             <h1>Front End Developer</h1>
             <p>I have absolutely no idea what I'm doing</p>
+        </section>
+
+        <!-- Sections -->
+        <section id="home">
+            <h1>Welcome to My Website</h1>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
         </section>
     </main>
     <footer>
