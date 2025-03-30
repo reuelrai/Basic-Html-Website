@@ -44,7 +44,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;   
+    background-color: var(--background-color);
 }
 
 nav ul {
@@ -134,11 +135,67 @@ section.intro h1 {
     font-size: 2em;
 }
 
-#projects{
+/* Section Styling */
+#projects {
+    padding: 0px 20px;
+}
+
+.projects-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Heading Styling */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Project Grid */
+.projects-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Project Card */
+.project-card {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    color: #aaa;
+    font-size: 1rem;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 .section-header{
