@@ -1,6 +1,6 @@
 /* Default Light Mode */
 :root {
-    --background-color: #fff;
+    --background-color: #FAF9F6;
     --text-color: #000;
     --accent-color: #000;
     --border-color: #000;
@@ -8,7 +8,7 @@
 
 /* Dark Mode */
 [data-theme="dark"] {
-    --background-color: #000;
+    --background-color: #121212;
     --text-color: #fff;
     --accent-color: #fff;
     --border-color: #fff;
@@ -44,7 +44,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;   
+    padding: 1rem;   
     background-color: var(--background-color);
 }
 
@@ -128,6 +128,23 @@ section.intro {
     align-items: center;
     height: 50vh;
 }
+
+section.intro.span{
+    flex-direction: row;
+}
+
+.span{
+    font-weight: bolder;
+}
+.span span {
+    display: inline-block; /* Required for transform to work */
+    transition: transform 0.3s ease-in-out;
+}
+
+.span span:hover {
+    transform: translateY(-7px);
+}
+
 
 
 section.intro h1 {
