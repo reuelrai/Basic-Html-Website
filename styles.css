@@ -27,6 +27,7 @@ body {
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
+    padding-top: 60px; /* Adjust based on header height to prevent content overlap */
     font-family: Arial, sans-serif;
     scroll-behavior: smooth !important;
 }
@@ -43,16 +44,31 @@ section {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem;   
+    align-items: center;  
     background-color: var(--background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+}
+
+nav {
+    max-width: 100%; /* Prevents overflow */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
 }
 
 nav ul {
     display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    margin-top: 1.5rem;
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    justify-content: center; /* Centers items */
+    align-items: center;
+    padding: 0;
+    margin: 1rem 0;
+    margin-right: 3rem;
 }
 
 nav ul li {
@@ -61,6 +77,7 @@ nav ul li {
     align-items: center;
     display: flex;
     font-size: 1rem; /* Adjust this based on your nav item size */
+    font-weight: bold;
 }
 
 nav ul li button {
@@ -135,21 +152,28 @@ section.intro.span{
 
 .span{
     font-weight: bolder;
+    font-size: 2em;
+    color: var(--accent-color);
+    text-align: center;
 }
+
 .span span {
     display: inline-block; /* Required for transform to work */
     transition: transform 0.3s ease-in-out;
 }
 
 .span span:hover {
-    transform: translateY(-7px);
+    transform: translateY(-15px);
 }
-
-
 
 section.intro h1 {
     font-weight: bold;
     font-size: 2em;
+}
+
+.text-change{
+    font-weight: bolder;
+    color: var(--accent-color);
 }
 
 /* Section Styling */

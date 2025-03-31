@@ -32,3 +32,13 @@ function toggleTheme() {
     }
 }
 
+//text change
+const element = document.querySelector(".text-change");
+
+element.addEventListener("mouseover", () => {
+    element.textContent = "An absolute beginner in web development.";
+});
+
+element.addEventListener("mouseout", () => {
+    element.textContent = "-- A Frontend Developer --";
+});
