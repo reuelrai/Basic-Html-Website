@@ -16,7 +16,7 @@
 
 /* Smooth Theme Transition */
 * {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 /* General Styling */
@@ -27,13 +27,15 @@ body {
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
-    padding-top: 60px; /* Adjust based on header height to prevent content overlap */
+    padding-top: 60px;
+    /* Adjust based on header height to prevent content overlap */
     font-family: Arial, sans-serif;
     scroll-behavior: smooth !important;
 }
 
 section {
-    height: 100vh; /* Full screen sections */
+    height: 100vh;
+    /* Full screen sections */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +46,7 @@ section {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center;
     background-color: var(--background-color);
     position: fixed;
     top: 0;
@@ -57,14 +59,18 @@ header {
 }
 
 nav {
-    max-width: 100%; /* Prevents overflow */
-    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    max-width: 100%;
+    /* Prevents overflow */
+    overflow-x: auto;
+    /* Allows horizontal scrolling if needed */
 }
 
 nav ul {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping if needed */
-    justify-content: center; /* Centers items */
+    flex-wrap: wrap;
+    /* Allows wrapping if needed */
+    justify-content: center;
+    /* Centers items */
     align-items: center;
     padding: 0;
     margin: 1rem 0;
@@ -76,7 +82,8 @@ nav ul li {
     justify-content: center;
     align-items: center;
     display: flex;
-    font-size: 1rem; /* Adjust this based on your nav item size */
+    font-size: 1rem;
+    /* Adjust this based on your nav item size */
     font-weight: bold;
 }
 
@@ -90,7 +97,8 @@ nav ul li button {
 }
 
 nav ul li button img {
-    width: 1.5rem; /* Adjust this to match text size */
+    width: 1.5rem;
+    /* Adjust this to match text size */
     height: auto;
     max-height: 1.5rem;
 }
@@ -146,20 +154,21 @@ section.intro {
     height: 50vh;
 }
 
-section.intro.span{
+section.intro.span {
     flex-direction: row;
 }
 
-.span{
+.span {
     font-weight: bolder;
     font-size: 2em;
     color: var(--accent-color);
     text-align: center;
-    
+
 }
 
 .span span {
-    display: inline-block; /* Required for transform to work */
+    display: inline-block;
+    /* Required for transform to work */
     transition: transform 0.5s ease-in-out;
 }
 
@@ -172,7 +181,7 @@ section.intro h1 {
     font-size: 2em;
 }
 
-.text-change{
+.text-change {
     font-weight: bolder;
     color: var(--accent-color);
     transition: color 1s ease-in-out;
@@ -190,7 +199,7 @@ section.intro h1 {
 }
 
 /* Heading Styling */
-h2 {
+.projects-wrapper h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     font-weight: bold;
@@ -241,9 +250,10 @@ h2 {
     transform: translateY(-5px);
 }
 
-.section-header{
+.section-header {
     z-index: 1;
 }
+
 /* Sections */
 .projects,
 .experience,
@@ -288,6 +298,55 @@ footer {
     padding: 1rem;
     border-top: 1px solid var(--border-color);
 }
+
+/*contact section*/
+#contact {
+    text-align: center; /* Center the content */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact h2 {
+    margin-bottom: 30px; /* Space between heading and icons */
+    font-size: 2.5rem;
+    
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between icons */
+}
+
+.social-icons a {
+    font-size: 3rem;
+    color: #333;
+    transition: transform 0.3s ease-in, color 0.1s ease-in-out;
+}
+
+/* Brand Colors */
+.social-icons a[href*="facebook.com"]:hover {
+    color: #1877F2; /* Facebook Blue */
+}
+
+.social-icons a[href*="instagram.com"]:hover {
+    color: #E4405F; /* Instagram Pink-Red */
+}
+
+.social-icons a[href*="github.com"]:hover {
+    color: #767676; /* GitHub Black */
+}
+
+.social-icons a[href*="linkedin.com"]:hover {
+    color: #0077B5; /* LinkedIn Blue */
+}
+
+/* Hover Effect */
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
